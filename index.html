@@ -38,7 +38,13 @@ h1{font-size:clamp(42px,5.3vw,72px);line-height:1.02;letter-spacing:-3px;max-wid
 .btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 22px;border-radius:7px;font-weight:700}
 .btn-primary{background:#fff;color:var(--navy)}
 .btn-ghost{border:1px solid rgba(255,255,255,.28);color:#fff}
-.hero-card{position:relative;min-height:440px;border:1px solid rgba(255,255,255,.16);background:linear-gradient(145deg,rgba(255,255,255,.10),rgba(255,255,255,.025));border-radius:18px;padding:25px;display:flex;align-items:flex-end;overflow:hidden}
+
+.hero-card{position:relative;min-height:440px;border-radius:18px;padding:25px;display:flex;align-items:flex-end;overflow:hidden}
+.hero-photo{position:relative;min-height:500px;border-radius:18px;overflow:hidden;box-shadow:0 25px 70px rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.18)}
+.hero-photo img{width:100%;height:100%;min-height:500px;object-fit:cover;display:block}
+.hero-photo-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,18,34,.03) 35%,rgba(6,18,34,.75) 100%)}
+.hero-photo .hero-label{position:absolute;z-index:2;left:25px;bottom:25px}
+
 .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px);background-size:34px 34px}
 .blueprint{position:absolute;inset:55px 35px 90px;border:1px solid rgba(170,213,247,.45);transform:rotate(-2deg)}
 .blueprint:before,.blueprint:after{content:"";position:absolute;border:1px solid rgba(170,213,247,.42)}
@@ -74,7 +80,7 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.08;letter-spacing:-1.7px}
 .check{font-size:14px;font-weight:700}.check:before{content:"✓";color:var(--blue);margin-right:9px}
 .projects{background:#fff}
 .project-grid{display:grid;grid-template-columns:1.35fr .65fr;grid-template-rows:1fr 1fr;gap:16px;min-height:520px}
-.project{border-radius:13px;overflow:hidden;position:relative;background:linear-gradient(135deg,#132f4c,#5d7f9d);min-height:250px}
+.project{border-radius:13px;overflow:hidden;position:relative;background-position:center;background-size:cover;min-height:250px}
 .project:first-child{grid-row:1/3;background:linear-gradient(135deg,#0b2139,#3775a8)}
 .project:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 35%,rgba(0,0,0,.78))}
 .project-content{position:absolute;z-index:2;bottom:25px;left:25px;right:25px;color:#fff}
@@ -87,13 +93,20 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.08;letter-spacing:-1.7px}
 .contact-box span{font-size:11px;color:#9eb4ca;text-transform:uppercase;letter-spacing:1.5px}.contact-box strong{display:block;font-size:24px;font-family:Manrope;margin:5px 0 18px}
 footer{background:#061222;color:#94a9be;padding:28px 0;font-size:12px}.footer{display:flex;justify-content:space-between;gap:20px}
 
+
+.visual-proof{padding:30px 0 95px;background:#fff}
+.photo-proof{display:grid;grid-template-columns:1fr 1fr;min-height:330px;border-radius:16px;overflow:hidden;background:var(--soft);align-items:center}
+.photo-proof img{width:100%;height:100%;min-height:330px;object-fit:cover}
+.photo-proof>div:last-child{padding:45px}
+.photo-proof p{color:var(--muted);margin-top:15px;max-width:450px}
+
 @media(max-width:850px){
 .hero-badge{font-size:11px;max-width:100%;white-space:normal}
 
 header,.nav{height:72px}.nav{padding:0}.brand img{height:42px}.brand span{display:none}
-.menu{display:none}.mobile{display:block}.hero .container{grid-template-columns:1fr;min-height:auto;padding:64px 0 70px}.hero-card{display:none}
+.menu{display:none}.mobile{display:block}.hero .container{grid-template-columns:1fr;min-height:auto;padding:64px 0 70px}.hero-card{display:none}.hero-photo{min-height:380px}.hero-photo img{min-height:380px}
 h1{letter-spacing:-2px}.hero p{font-size:17px}.trust .container{grid-template-columns:1fr 1fr;gap:22px}.trust-item{border:0;padding:0}
-section{padding:70px 0}.section-head{display:block}.section-head p{margin-top:14px}.cards{grid-template-columns:1fr}.about-grid,.contact-grid{grid-template-columns:1fr;gap:35px}.about-panel{min-height:320px;padding:35px}.project-grid{grid-template-columns:1fr;grid-template-rows:repeat(3,230px);min-height:0}.project:first-child{grid-row:auto}.checklist{grid-template-columns:1fr}.footer{display:block}.footer div+div{margin-top:8px}
+section{padding:70px 0}.section-head{display:block}.section-head p{margin-top:14px}.cards{grid-template-columns:1fr}.about-grid,.contact-grid{grid-template-columns:1fr;gap:35px}.about-panel{min-height:320px;padding:35px}.project-grid{grid-template-columns:1fr;grid-template-rows:repeat(3,230px);min-height:0}.project:first-child{grid-row:auto}.photo-proof{grid-template-columns:1fr}.photo-proof>div:last-child{padding:30px}.photo-proof img{min-height:240px}.checklist{grid-template-columns:1fr}.footer{display:block}.footer div+div{margin-top:8px}
 }
 </style>
 </head>
@@ -124,8 +137,9 @@ section{padding:70px 0}.section-head{display:block}.section-head p{margin-top:14
       <a class="btn btn-ghost" href="#servicos">Conhecer serviços</a>
     </div>
   </div>
-  <div class="hero-card">
-    <div class="grid"></div><div class="blueprint"><div class="cross1"></div><div class="cross2"></div></div>
+  <div class="hero-photo">
+    <img src="https://images.unsplash.com/photo-1652303518372-79ad122e3181?auto=format&fit=crop&fm=jpg&q=85&w=1800" alt="Equipe em obra de construção civil">
+    <div class="hero-photo-overlay"></div>
     <div class="hero-label"><small>Responsabilidade técnica</small><strong>Eng. Civil Ivan Nascimento de Jesus</strong></div>
   </div>
 </div>
@@ -158,10 +172,17 @@ section{padding:70px 0}.section-head{display:block}.section-head p{margin-top:14
 <section class="projects" id="projetos"><div class="container">
 <div class="section-head"><div><div class="kicker">Experiência</div><h2>Projetos e soluções realizadas.</h2></div><p>Apresentação visual dos principais tipos de trabalho executados pela equipe.</p></div>
 <div class="project-grid">
- <article class="project"><div class="project-content"><small>Manutenção predial</small><h3>Recuperação e tratamento de infiltrações</h3><p>Diagnóstico, tratamento, recuperação e acabamento.</p></div></article>
- <article class="project"><div class="project-content"><small>Envidraçamento</small><h3>Soluções em vidro e alumínio</h3><p>Fechamentos e aplicações sob medida.</p></div></article>
- <article class="project"><div class="project-content"><small>Reformas</small><h3>Execução e acabamento</h3><p>Serviços coordenados do início ao acabamento.</p></div></article>
+ <article class="project project-a" style="background-image:url('https://images.unsplash.com/photo-1783753445287-4ce8ef207492?auto=format&fit=crop&fm=jpg&q=85&w=1600')"><div class="project-content"><small>Manutenção predial</small><h3>Recuperação e tratamento de infiltrações</h3><p>Diagnóstico, tratamento, recuperação e acabamento.</p></div></article>
+ <article class="project project-b" style="background-image:url('https://images.unsplash.com/photo-1776537237450-73226455726f?auto=format&fit=crop&fm=jpg&q=85&w=1600')"><div class="project-content"><small>Envidraçamento</small><h3>Soluções em vidro e alumínio</h3><p>Fechamentos e aplicações sob medida.</p></div></article>
+ <article class="project project-c" style="background-image:url('https://images.unsplash.com/photo-1652303518372-79ad122e3181?auto=format&fit=crop&fm=jpg&q=85&w=1800')"><div class="project-content"><small>Reformas</small><h3>Execução e acabamento</h3><p>Serviços coordenados do início ao acabamento.</p></div></article>
 </div></div></section>
+
+<section class="visual-proof"><div class="container">
+  <div class="photo-proof">
+    <img src="https://images.unsplash.com/photo-1776537237450-73226455726f?auto=format&fit=crop&fm=jpg&q=85&w=1600" alt="Arquitetura e construção">
+    <div><div class="kicker">Engenharia em foco</div><h2>Imagem profissional para transmitir a qualidade do seu trabalho.</h2><p>Enquanto você reúne suas próprias fotos de obras, o site já apresenta uma identidade visual forte e profissional.</p></div>
+  </div>
+</div></section>
 
 <section class="contact" id="contato"><div class="container contact-grid">
 <div><div class="kicker">Vamos conversar</div><h2>Seu imóvel merece uma solução técnica.</h2><p>Envie as informações do serviço, fotos ou documentos. Avaliamos a demanda e orientamos o próximo passo.</p><a class="btn btn-primary" href="https://wa.me/5511968354094?text=Olá!%20Sou%20cliente%20e%20gostaria%20de%20uma%20avaliação." target="_blank">Solicitar atendimento →</a></div>
