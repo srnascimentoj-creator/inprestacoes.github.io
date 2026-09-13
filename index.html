@@ -54,21 +54,31 @@ footer{background:#080d15;color:#b7c0ca;text-align:center;padding:25px 20px;font
   .navlink.brand img{height:44px}
 }
 </style>
+
+<style>
+.brand{display:flex;align-items:center;flex-shrink:0}.brand img{height:50px;width:auto;display:block}
+.desktop-nav{display:flex;align-items:center;gap:20px;margin-left:auto}.desktop-nav a{color:#fff;text-decoration:none;font-size:14px;font-weight:600}.desktop-nav a:hover{color:var(--accent)}
+.header-actions{display:flex;align-items:center;gap:10px;margin-left:20px}.mobile-menu{display:none;color:#fff}.mobile-menu summary{list-style:none;cursor:pointer;border:1px solid #ffffff44;border-radius:8px;padding:9px 11px;font-weight:700}.mobile-menu summary::-webkit-details-marker{display:none}.mobile-menu div{position:absolute;right:20px;top:68px;background:var(--dark);border:1px solid #ffffff22;border-radius:10px;padding:10px;min-width:170px;box-shadow:0 8px 25px #0005}.mobile-menu a{display:block;color:#fff;text-decoration:none;padding:9px 10px}.responsavel{margin:15px 0 5px;font-size:16px;line-height:1.5;color:#dbe8f3}
+@media(max-width:900px){.desktop-nav{display:none}.mobile-menu{display:block}.header-actions{margin-left:auto}.nav{padding:12px 18px}.brand img{height:46px}}
+@media(max-width:520px){.brand img{height:42px}.header-actions{gap:7px}.mobile-menu summary{font-size:12px;padding:8px 9px}.header-actions .btn{padding:11px 14px;font-size:13px}.responsavel{font-size:14px}}
+</style>
 </head>
 <body>
 <header>
 <div class="nav">
-
-<nav><a href="#servicos">Serviços</a><a href="#sobre">Empresa</a><a href="#portfolio">Portfólio</a><a href="#contato">Contato</a></nav>
-<a class="btn" href="https://wa.me/5511968354094?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank">Orçamento</a>
+<a class="brand" href="#inicio" aria-label="IN Prestações de Serviços"><img src="logo-in.png" alt="IN Prestações de Serviços"></a>
+<nav class="desktop-nav" aria-label="Navegação principal"><a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#portfolio">Portfólio</a><a href="#contato">Contato</a></nav>
+<div class="header-actions"><details class="mobile-menu"><summary>☰ Menu</summary><div><a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#portfolio">Portfólio</a><a href="#contato">Contato</a></div></details>
+<a class="btn" href="https://wa.me/5511968354094?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank">Orçamento</a></div>
 </div>
 </header>
 
 <main>
-<section class="hero">
+<section class="hero" id="inicio">
 <div class="hero-inner">
 <div>
 <div class="badge">ENGENHARIA CIVIL • REFORMAS • MANUTENÇÃO</div>
+<div class="responsavel"><strong>Eng. Civil Ivan Nascimento de Jesus</strong><br>Responsável técnico • São Paulo e Grande São Paulo</div>
 <h1>Soluções técnicas para sua obra e seu imóvel.</h1>
 <p>Engenharia, laudos, documentação, reformas e manutenção com atendimento profissional para empresas, condomínios e clientes particulares.</p>
 <a class="btn" href="https://wa.me/5511968354094?text=Olá!%20Vim%20pelo%20site%20da%20IN%20e%20gostaria%20de%20um%20orçamento." target="_blank">📲 Solicitar orçamento</a>
