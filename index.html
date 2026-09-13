@@ -11,7 +11,7 @@
 body{font-family:Arial,Helvetica,sans-serif;color:var(--text);line-height:1.6;background:#fff}
 header{background:var(--dark);color:#fff;position:sticky;top:0;z-index:10;box-shadow:0 2px 12px #0002}
 .nav{max-width:1120px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.logo{font-weight:800;font-size:20px;letter-spacing:.5px}.logo span{color:var(--accent)}
+.logo{display:flex;align-items:center}.logo img{height:48px;width:auto;display:block}
 nav a{color:#fff;text-decoration:none;margin-left:18px;font-size:14px}
 .btn{display:inline-block;background:var(--accent);color:#111;text-decoration:none;padding:13px 20px;border-radius:8px;font-weight:700}
 .hero{background:linear-gradient(135deg,#0e1a2b,#1769aa);color:#fff;padding:90px 20px}
@@ -35,13 +35,13 @@ section{padding:75px 20px}.wrap{max-width:1120px;margin:auto}
 footer{background:#080d15;color:#b7c0ca;text-align:center;padding:25px 20px;font-size:13px}
 .float{position:fixed;right:18px;bottom:18px;background:#25d366;color:#fff;padding:15px 18px;border-radius:50px;text-decoration:none;font-weight:800;box-shadow:0 5px 20px #0004;z-index:20}
 @media(max-width:800px){nav{display:none}.hero-inner,.about{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.hero{padding:65px 20px}}
-@media(max-width:520px){.grid{grid-template-columns:1fr}section{padding:55px 18px}.hero-card{margin-top:10px}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}section{padding:55px 18px}.hero-card{margin-top:10px}.logo img{height:42px}}
 </style>
 </head>
 <body>
 <header>
 <div class="nav">
-<div class="logo">IN <span>PRESTAÇÕES</span></div>
+<div class="logo"><img src="logo-in.png" alt="IN Prestações de Serviços"></div>
 <nav><a href="#servicos">Serviços</a><a href="#sobre">Empresa</a><a href="#portfolio">Portfólio</a><a href="#contato">Contato</a></nav>
 <a class="btn" href="https://wa.me/5511968354094?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank">Orçamento</a>
 </div>
