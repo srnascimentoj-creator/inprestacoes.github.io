@@ -1,254 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="IN Prestações de Serviços — Engenharia Civil, laudos, ART, reformas, manutenção predial e soluções técnicas em São Paulo e Grande São Paulo.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="IN Prestações de Serviços — Engenharia Civil, laudos, projetos, reformas, manutenção e sistemas contra incêndio.">
 <title>IN Prestações de Serviços | Engenharia Civil</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap');
-:root{--navy:#08182d;--navy2:#102845;--blue:#155da8;--blue2:#2b78c5;--ink:#102033;--muted:#667589;--line:#e4eaf0;--soft:#f5f8fb;--white:#fff}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:"DM Sans",Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
-a{text-decoration:none;color:inherit}
-.container{width:min(1160px,calc(100% - 40px));margin:auto}
-header{height:82px;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(16,32,51,.08);position:sticky;top:0;z-index:50}
-.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:25px}
-.brand{display:flex;align-items:center;gap:13px;font-family:Manrope;font-weight:800;letter-spacing:-.5px}
-.brand img{height:47px;width:auto;display:block}
-.brand span{font-size:15px;letter-spacing:1.2px}
-.menu{display:flex;align-items:center;gap:30px;color:#43546a;font-size:14px;font-weight:600}
-.menu a:hover{color:var(--blue)}
-.cta{background:var(--navy);color:#fff!important;padding:13px 20px;border-radius:7px;box-shadow:0 8px 20px rgba(8,24,45,.15)}
-.mobile{display:none;border:1px solid var(--line);padding:10px 13px;border-radius:7px;background:#fff;font-weight:700}
-.hero{background:linear-gradient(118deg,#07172a 0%,#0d2845 52%,#164c7d 100%);color:#fff;overflow:hidden}
-.hero .container{min-height:650px;display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:60px;padding:76px 0}
-.eyebrow{font-size:12px;letter-spacing:2.2px;text-transform:uppercase;color:#a9c8e5;font-weight:700;margin-bottom:22px}
-.hero-badge{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(210,230,246,.28);background:rgba(255,255,255,.045);padding:9px 14px;border-radius:999px;color:#d5e4f0;font-size:12px;letter-spacing:.5px;margin-bottom:22px}
-.crea-tag{font-size:10px;letter-spacing:1.3px;font-weight:800;color:#fff;background:rgba(43,120,197,.65);padding:5px 8px;border-radius:5px}
-.btn-whatsapp-hero{background:#fff;color:var(--navy)!important;border:1px solid rgba(255,255,255,.5);box-shadow:0 12px 28px rgba(0,0,0,.16)}
-.btn-whatsapp-hero:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(0,0,0,.22)}
-.wa-icon{display:inline-flex;align-items:center;justify-content:center;width:21px;height:21px;border-radius:50%;border:2px solid currentColor;font-size:10px;line-height:1;margin-right:8px}
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap');
+:root{--navy:#071b33;--blue:#155da8;--light:#f4f7fa;--text:#102033;--muted:#65758a;--line:#e3e9ef;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Manrope,Arial,sans-serif;color:var(--text);background:#fff}a{text-decoration:none;color:inherit}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+header{height:78px;background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:100}.nav{height:78px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px}.brand img{height:48px}.brand-text{font-size:12px;line-height:1.2;font-weight:800;letter-spacing:1px}.brand-text small{display:block;color:#6d7c8d;font-size:9px;letter-spacing:2px;margin-top:4px}.links{display:flex;align-items:center;gap:27px;font-size:13px;font-weight:700;color:#425269}.links a:hover{color:var(--blue)}.top-cta{padding:12px 19px;border-radius:7px;background:var(--navy);color:#fff!important}.menu-btn{display:none;background:#fff;border:1px solid var(--line);border-radius:7px;padding:10px 13px;font-weight:800}
+.hero{background:var(--navy);color:#fff}.hero-grid{display:grid;grid-template-columns:1fr 1.08fr;min-height:570px}.hero-copy{padding:72px 25px 65px 0;display:flex;flex-direction:column;justify-content:center}.eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#a9c6df;font-weight:800;margin-bottom:18px}.hero h1{font-size:clamp(44px,5.2vw,70px);line-height:1.02;letter-spacing:-3px;margin:0;max-width:650px}.hero p{font-size:17px;line-height:1.7;color:#d5e1ec;max-width:590px;margin:23px 0 28px}.actions{display:flex;gap:11px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;border-radius:7px;font-size:13px;font-weight:800}.btn-white{background:#fff;color:var(--navy)}.btn-outline{border:1px solid rgba(255,255,255,.35);color:#fff}.hero-photo{min-height:570px;background-image:linear-gradient(90deg,var(--navy) 0%,rgba(7,27,51,.28) 28%,rgba(7,27,51,.05)),url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1800&q=85');background-size:cover;background-position:center;position:relative}.photo-card{position:absolute;left:30px;bottom:30px;background:#fff;color:var(--navy);padding:18px 20px;border-radius:9px;box-shadow:0 15px 40px rgba(0,0,0,.2);max-width:300px}.photo-card b{font-size:15px}.photo-card span{display:block;color:#68798c;font-size:11px;margin-top:3px}
+.cred{background:#fff;border-bottom:1px solid var(--line)}.cred-grid{display:grid;grid-template-columns:repeat(4,1fr)}.cred-item{padding:23px 20px;border-right:1px solid var(--line)}.cred-item:first-child{padding-left:0}.cred-item:last-child{border:0}.cred-item b{display:block;font-size:15px}.cred-item span{font-size:11px;color:var(--muted)}
+section{padding:86px 0}.head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:35px}.kicker{color:var(--blue);font-size:10px;letter-spacing:2.5px;text-transform:uppercase;font-weight:800;margin-bottom:9px}h2{font-size:clamp(31px,4vw,47px);line-height:1.08;letter-spacing:-2px;margin:0}.head p{max-width:430px;color:var(--muted);font-size:14px;line-height:1.7;margin:0}
+.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.service{height:250px;border-radius:10px;overflow:hidden;position:relative;background-size:cover;background-position:center;display:flex;align-items:flex-end}.service:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 25%,rgba(3,16,30,.9) 100%)}.service-content{position:relative;z-index:2;color:#fff;padding:19px;width:100%}.service-content small{font-size:9px;letter-spacing:1.7px;color:#c4d9eb;font-weight:800}.service-content h3{font-size:18px;margin:4px 0 3px}.service-content p{font-size:10px;line-height:1.5;color:#d9e5ee;margin:0}
+.s1{background-image:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=85')}.s2{background-image:url('https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=900&q=85')}.s3{background-image:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=85')}.s4{background-image:url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=900&q=85')}.s5{background-image:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=85')}.s6{background-image:url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=85')}.s7{background-image:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=85')}.s8{background-image:url('https://images.unsplash.com/photo-1542013936693-884638332954?auto=format&fit=crop&w=900&q=85')}.s9{background-image:url('https://images.unsplash.com/photo-1517089596392-fb9a9033e05b?auto=format&fit=crop&w=900&q=85')}.s10{background-image:url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=900&q=85')}.s11{background-image:url('https://images.unsplash.com/photo-1581092335397-9fa341b7d8c0?auto=format&fit=crop&w=900&q=85')}.s12{background-image:url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=85')}
 
-h1,h2,h3{font-family:Manrope,Arial,sans-serif}
-h1{font-size:clamp(42px,5.3vw,72px);line-height:1.02;letter-spacing:-3px;max-width:700px}
-.hero p{font-size:19px;color:#d8e4ef;max-width:610px;margin:27px 0 32px}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 22px;border-radius:7px;font-weight:700}
-.btn-primary{background:#fff;color:var(--navy)}
-.btn-ghost{border:1px solid rgba(255,255,255,.28);color:#fff}
-
-.hero-card{position:relative;min-height:440px;border-radius:18px;padding:25px;display:flex;align-items:flex-end;overflow:hidden}
-.hero-photo{position:relative;min-height:500px;border-radius:18px;overflow:hidden;box-shadow:0 25px 70px rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.18)}
-.hero-photo img{width:100%;height:100%;min-height:500px;object-fit:cover;display:block}
-.hero-photo-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,18,34,.03) 35%,rgba(6,18,34,.75) 100%)}
-.hero-photo .hero-label{position:absolute;z-index:2;left:25px;bottom:25px}
-
-.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px);background-size:34px 34px}
-.blueprint{position:absolute;inset:55px 35px 90px;border:1px solid rgba(170,213,247,.45);transform:rotate(-2deg)}
-.blueprint:before,.blueprint:after{content:"";position:absolute;border:1px solid rgba(170,213,247,.42)}
-.blueprint:before{left:13%;top:18%;width:60%;height:50%}
-.blueprint:after{left:28%;top:8%;width:57%;height:78%}
-.cross1,.cross2{position:absolute;background:rgba(180,220,250,.42)}
-.cross1{height:1px;left:8%;right:8%;top:49%}.cross2{width:1px;top:8%;bottom:8%;left:51%}
-.hero-label{position:relative;z-index:2;background:#fff;color:var(--navy);border-radius:10px;padding:18px 20px;width:min(290px,90%);box-shadow:0 15px 40px rgba(0,0,0,.18)}
-.hero-label small{display:block;color:var(--blue);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:800}
-.hero-label strong{display:block;font-family:Manrope;font-size:22px;line-height:1.15;margin-top:5px}
-.trust{border-bottom:1px solid var(--line);background:#fff}
-.trust .container{display:grid;grid-template-columns:repeat(4,1fr);padding:25px 0}
-.trust-item{padding:0 24px;border-right:1px solid var(--line)}
-.trust-item:first-child{padding-left:0}.trust-item:last-child{border:0}
-.trust strong{font-family:Manrope;font-size:18px;display:block}.trust span{font-size:12px;color:var(--muted)}
-section{padding:95px 0}
-.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:48px}
-.kicker{color:var(--blue);font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:800;margin-bottom:10px}
-h2{font-size:clamp(30px,4vw,46px);line-height:1.08;letter-spacing:-1.7px}
-.section-head p{max-width:440px;color:var(--muted);font-size:16px}
-.services{background:#fff}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.card{border:1px solid var(--line);padding:30px;border-radius:10px;min-height:235px;transition:.2s;background:#fff}
-.card:hover{transform:translateY(-4px);box-shadow:0 18px 45px rgba(8,24,45,.08)}
-.num{font-family:Manrope;color:#9aa9ba;font-size:12px;font-weight:800}
-.card h3{font-size:22px;margin:38px 0 9px}.card p{font-size:14px;color:var(--muted)}
-.service-photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.service-photo{height:260px;border-radius:12px;overflow:hidden;position:relative;background-position:center;background-size:cover;background-color:#17314e;display:flex;align-items:flex-end}
-.service-photo:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,18,32,.02) 20%,rgba(5,18,32,.86) 100%)}
-.service-photo>div{position:relative;z-index:2;color:#fff;padding:22px;width:100%}
-.service-photo span{font-size:10px;letter-spacing:1.5px;color:#c7d9ea;font-weight:800}
-.service-photo h3{font-size:21px;margin:4px 0 2px}
-.service-photo p{font-size:12px;color:#d8e4ef}
-.helmet-icon{width:42px;height:42px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#e8f1f8;color:var(--navy);font-size:22px;flex:none}
-.hero-label{display:flex;align-items:center;gap:12px}
-
-.about{background:var(--soft)}
-.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
-.about-panel{background:var(--navy);color:#fff;border-radius:16px;padding:50px;min-height:410px;display:flex;flex-direction:column;justify-content:space-between}
-.about-logo{font-family:Georgia,serif;font-size:92px;line-height:1;color:#d8e6f3}
-.about-panel strong{font-family:Manrope;font-size:24px;display:block}.about-panel span{color:#a9bdd2;font-size:13px}
-.about-text p{color:var(--muted);margin:20px 0;font-size:16px}.checklist{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:25px}
-.check{font-size:14px;font-weight:700}.check:before{content:"✓";color:var(--blue);margin-right:9px}
-.projects{background:#fff}
-.project-grid{display:grid;grid-template-columns:1.35fr .65fr;grid-template-rows:1fr 1fr;gap:16px;min-height:520px}
-.project{border-radius:13px;overflow:hidden;position:relative;background-position:center;background-size:cover;min-height:250px}
-.project:first-child{grid-row:1/3;background:linear-gradient(135deg,#0b2139,#3775a8)}
-.project:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 35%,rgba(0,0,0,.78))}
-.project-content{position:absolute;z-index:2;bottom:25px;left:25px;right:25px;color:#fff}
-.project small{color:#c9dff2;text-transform:uppercase;letter-spacing:1.5px;font-size:10px;font-weight:800}
-.project h3{font-size:24px;margin-top:5px}.project p{font-size:13px;color:#dce7f0}
-.contact{background:var(--navy);color:#fff}
-.contact-grid{display:grid;grid-template-columns:1fr .8fr;gap:70px;align-items:center}
-.contact p{color:#b8c9da;max-width:600px;margin:18px 0 28px}
-.contact-box{border:1px solid rgba(255,255,255,.15);border-radius:13px;padding:28px;background:rgba(255,255,255,.04)}
-.contact-box span{font-size:11px;color:#9eb4ca;text-transform:uppercase;letter-spacing:1.5px}.contact-box strong{display:block;font-size:24px;font-family:Manrope;margin:5px 0 18px}
-footer{background:#061222;color:#94a9be;padding:28px 0;font-size:12px}.footer{display:flex;justify-content:space-between;gap:20px}
-
-
-.visual-proof{padding:30px 0 95px;background:#fff}
-.photo-proof{display:grid;grid-template-columns:1fr 1fr;min-height:330px;border-radius:16px;overflow:hidden;background:var(--soft);align-items:center}
-.photo-proof img{width:100%;height:100%;min-height:330px;object-fit:cover}
-.photo-proof>div:last-child{padding:45px}
-.photo-proof p{color:var(--muted);margin-top:15px;max-width:450px}
-
-
+.about{background:var(--light)}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:stretch}.about-photo{min-height:390px;border-radius:12px;background:url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=85') center/cover}.about-copy{padding:15px 0}.about-copy p{color:var(--muted);font-size:15px;line-height:1.8}.points{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:25px}.point{font-size:12px;font-weight:800}.point:before{content:"✓";color:var(--blue);margin-right:8px}
+.projects{background:#fff}.project-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:14px}.project{height:330px;border-radius:12px;background-size:cover;background-position:center;position:relative;overflow:hidden}.project:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 25%,rgba(3,16,30,.88))}.p1{background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=85')}.p2{background-image:url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=85')}.project-info{position:absolute;z-index:2;left:22px;right:22px;bottom:20px;color:#fff}.project-info small{font-size:9px;letter-spacing:1.6px;text-transform:uppercase;color:#c8d9e7}.project-info h3{font-size:22px;margin:4px 0}.project-info p{font-size:11px;color:#d8e3ec;margin:0}
+.contact{background:var(--navy);color:#fff}.contact-grid{display:grid;grid-template-columns:1fr .75fr;gap:70px;align-items:center}.contact p{color:#b9c9d9;max-width:600px;font-size:15px;line-height:1.8}.contact-box{border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:28px;background:rgba(255,255,255,.04)}.contact-box small{color:#9fb5c9;text-transform:uppercase;letter-spacing:1.5px;font-size:9px}.contact-box b{display:block;font-size:21px;margin:5px 0 20px}.whats{background:#1fc86b!important;color:#fff!important}
+footer{background:#04101f;color:#8fa4b8;padding:25px 0;font-size:10px}.foot{display:flex;justify-content:space-between}
 .mobile-drawer{display:none}
-.mobile-drawer.open{display:flex}
-.mobile-drawer{position:fixed;top:72px;left:0;right:0;background:#fff;z-index:49;border-bottom:1px solid var(--line);box-shadow:0 15px 30px rgba(8,24,45,.12);padding:14px 20px;flex-direction:column;gap:2px}
-.mobile-drawer a{padding:14px 4px;font-weight:700;color:var(--ink);border-bottom:1px solid #edf1f5}
-.mobile-drawer .drawer-cta{margin-top:8px;background:var(--navy);color:#fff;border:0;border-radius:7px;text-align:center}
 
-@media(max-width:850px){
-.hero-badge{font-size:11px;max-width:100%;white-space:normal}
-header,.nav{height:72px}.nav{padding:0}.brand img{height:42px}.brand span{display:none}
-.menu{display:none}.mobile{display:block;border:1px solid var(--line);background:#fff;color:var(--navy);border-radius:7px;padding:10px 14px;font-weight:800}
-.hero .container{display:flex;flex-direction:column;gap:0;min-height:auto;padding:0 0 62px}
-.hero-photo{order:1;width:100%;min-height:330px;border-radius:0;box-shadow:none;border:0}
-.hero-photo img{width:100%;height:330px;min-height:330px;object-fit:cover}
-.hero-photo .hero-label{left:20px;bottom:18px}
-.hero .container>div:first-child{order:2;padding:45px 20px 0}
-.hero .hero-actions{margin-bottom:0}
-h1{letter-spacing:-2px}.hero p{font-size:17px}.trust .container{grid-template-columns:1fr 1fr;gap:22px}.trust-item{border:0;padding:0}
-section{padding:70px 0}.section-head{display:block}.section-head p{margin-top:14px}.cards{grid-template-columns:1fr}.about-grid,.contact-grid{grid-template-columns:1fr;gap:35px}.about-panel{min-height:320px;padding:35px}.project-grid{grid-template-columns:1fr;grid-template-rows:repeat(3,230px);min-height:0}.project:first-child{grid-row:auto}.photo-proof{grid-template-columns:1fr}.photo-proof>div:last-child{padding:30px}.photo-proof img{min-height:240px}.checklist{grid-template-columns:1fr}.footer{display:block}.footer div+div{margin-top:8px}
+@media(max-width:900px){
+.wrap{width:min(100% - 30px,620px)}header,.nav{height:70px}.brand img{height:43px}.brand-text{display:none}.links{display:none}.menu-btn{display:block}
+.mobile-drawer{position:fixed;top:70px;left:0;right:0;z-index:99;background:#fff;padding:10px 15px;border-bottom:1px solid var(--line);box-shadow:0 14px 30px rgba(0,0,0,.12)}.mobile-drawer.open{display:block}.mobile-drawer a{display:block;padding:14px 5px;border-bottom:1px solid #edf1f5;font-size:13px;font-weight:800}.mobile-drawer a:last-child{background:var(--navy);color:#fff;text-align:center;border-radius:7px;margin-top:8px}
+.hero-grid{display:flex;flex-direction:column}.hero-photo{order:1;min-height:330px;height:330px;background-image:linear-gradient(rgba(7,27,51,.08),rgba(7,27,51,.18)),url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85')}.hero-copy{order:2;padding:42px 0 52px}.hero h1{font-size:46px;letter-spacing:-2px}.hero p{font-size:15px}.photo-card{left:15px;bottom:15px}.cred-grid{grid-template-columns:1fr 1fr}.cred-item{border:0;padding:18px 8px}.cred-item:first-child{padding-left:8px}
+section{padding:65px 0}.head{display:block}.head p{margin-top:13px}.service-grid{grid-template-columns:1fr 1fr;gap:10px}.service{height:205px}.service-content{padding:14px}.service-content h3{font-size:16px}.service-content p{font-size:9px}
+.about-grid,.contact-grid{grid-template-columns:1fr;gap:30px}.about-photo{min-height:270px}.points{grid-template-columns:1fr}.project-grid{grid-template-columns:1fr}.project{height:260px}.foot{display:block}.foot div+div{margin-top:8px}
 }
-
-@media(max-width:850px){
-.service-photo-grid{grid-template-columns:1fr 1fr;gap:10px}
-.service-photo{height:210px}
-.service-photo h3{font-size:17px}
-.service-photo p{font-size:11px}
-.service-photo>div{padding:15px}
-.hero-label{max-width:calc(100% - 36px)}
-}
-
+@media(max-width:430px){.hero h1{font-size:40px}.service{height:190px}.service-content h3{font-size:15px}.hero-photo{height:290px;min-height:290px}}
 </style>
 </head>
 <body>
-<header>
-  <div class="container nav">
-    <a class="brand" href="#inicio">
-      <img src="logo-in.png" alt="IN Prestações de Serviços">
-      <span>PRESTAÇÕES DE SERVIÇOS</span>
-    </a>
-    <nav class="menu">
-      <a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#projetos">Projetos</a><a href="#contato">Contato</a>
-      <a class="cta" href="https://wa.me/5511968354094?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank">Solicitar orçamento</a>
-    </nav>
-    <button class="mobile" id="menuBtn" aria-label="Abrir menu">☰ <span>Menu</span></button>
-  </div>
-</header>
-<div class="mobile-drawer" id="mobileDrawer">
-  <a href="#servicos">Serviços</a>
-  <a href="#sobre">Sobre</a>
-  <a href="#projetos">Projetos</a>
-  <a href="#contato">Contato</a>
-  <a class="drawer-cta" href="https://wa.me/5511968354094?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank">Solicitar orçamento via WhatsApp</a>
-</div>
+<header><div class="wrap nav">
+<a class="brand" href="#inicio"><img src="logo-in.png" alt="IN"><div class="brand-text">PRESTAÇÕES DE SERVIÇOS<small>ENGENHARIA CIVIL</small></div></a>
+<nav class="links"><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#projetos">Projetos</a><a href="#contato">Contato</a><a class="top-cta" href="https://wa.me/5511968354094?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank">Fale no WhatsApp</a></nav>
+<button class="menu-btn" id="menuBtn">☰ Menu</button>
+</div></header>
+<div class="mobile-drawer" id="drawer"><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#projetos">Projetos</a><a href="#contato">Contato</a><a href="https://wa.me/5511968354094?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank">Solicitar orçamento via WhatsApp</a></div>
 
 <main>
-<section class="hero" id="inicio">
-<div class="container">
-  <div>
-    <div class="hero-badge"><span class="crea-tag">CREA-SP</span> Engenharia Civil · São Paulo e Grande São Paulo</div>
-    <h1>Engenharia que transforma problemas em soluções.</h1>
-    <p>Laudos, ART, CLCB/AVCB, reformas e manutenção predial com responsabilidade técnica e execução profissional.</p>
-    <div class="hero-actions">
-      <a href="https://wa.me/5511968354094?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank" class="btn btn-whatsapp-hero"><span class="wa-icon">◉</span> Solicitar orçamento via WhatsApp</a>
-      <a class="btn btn-ghost" href="#servicos">Conhecer serviços</a>
-    </div>
-  </div>
-  <div class="hero-photo">
-    <img src="https://images.unsplash.com/photo-1652303518372-79ad122e3181?auto=format&fit=crop&fm=jpg&q=85&w=1800" alt="Equipe em obra de construção civil">
-    <div class="hero-photo-overlay"></div>
-    <div class="hero-label">
-  <div class="helmet-icon">⛑</div>
-  <div><small>Responsabilidade técnica</small><strong>Eng. Civil Ivan Nascimento de Jesus</strong></div>
-</div>
-  </div>
-</div>
-</section>
+<section class="hero" id="inicio"><div class="wrap hero-grid">
+<div class="hero-copy"><div class="eyebrow">Engenharia Civil · São Paulo e Grande São Paulo</div><h1>Projetos que se tornam realidade.</h1><p>Laudos, projetos, reformas e soluções completas com responsabilidade técnica e execução profissional.</p><div class="actions"><a class="btn btn-white" href="https://wa.me/5511968354094?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank">Solicitar orçamento</a><a class="btn btn-outline" href="#servicos">Conheça nossos serviços</a></div></div>
+<div class="hero-photo"><div class="photo-card"><b>Eng. Civil Ivan Nascimento de Jesus</b><span>Responsável técnico · CREA-SP</span></div></div>
+</div></section>
 
-<div class="trust"><div class="container">
-  <div class="trust-item"><strong>CREA-SP</strong><span>Responsabilidade técnica</span></div>
-  <div class="trust-item"><strong>Laudos & ART</strong><span>Documentação e segurança</span></div>
-  <div class="trust-item"><strong>Reformas</strong><span>Execução e acompanhamento</span></div>
-  <div class="trust-item"><strong>Atendimento</strong><span>São Paulo e Grande SP</span></div>
-</div></div>
+<div class="cred"><div class="wrap cred-grid"><div class="cred-item"><b>CREA-SP</b><span>Responsabilidade técnica</span></div><div class="cred-item"><b>Laudos & ART</b><span>Diagnóstico e documentação</span></div><div class="cred-item"><b>Obras & Reformas</b><span>Execução profissional</span></div><div class="cred-item"><b>Atendimento</b><span>São Paulo e Grande SP</span></div></div></div>
 
-
-<section class="services" id="servicos"><div class="container">
-<div class="section-head"><div><div class="kicker">Serviços</div><h2>Engenharia, obra e manutenção em um só lugar.</h2></div><p>Cada serviço apresentado com uma imagem que remete diretamente ao trabalho realizado pela IN.</p></div>
-<div class="service-photo-grid">
-  <article class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85')"><div><span>01</span><h3>Impermeabilização</h3><p>Proteção contra infiltrações e umidade.</p></div></article>
-  <article class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=1200&q=85')"><div><span>02</span><h3>Revestimentos</h3><p>Acabamentos, pisos e paredes.</p></div></article>
-  <article class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=85')"><div><span>03</span><h3>Forros</h3><p>Forro, manutenção e acabamento.</p></div></article>
-  <article class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=85')"><div><span>04</span><h3>Drywall</h3><p>Divisórias e soluções internas.</p></div></article>
-  <article class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=85')"><div><span>05</span><h3>Reformas</h3><p>Execução e acompanhamento.</p></div></article>
-  <article class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=85')"><div><span>06</span><h3>Laudos e vistorias</h3><p>Diagnóstico e parecer técnico.</p></div></article>
-  <article class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85')"><div><span>07</span><h3>Projetos</h3><p>Planejamento e soluções técnicas.</p></div></article>
-  <article class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1542013936693-884638332954?auto=format&fit=crop&w=1200&q=85')"><div><span>08</span><h3>Sistema contra incêndio</h3><p>Soluções para segurança da edificação.</p></div></article>
-  <article class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1517089596392-fb9a9033e05b?auto=format&fit=crop&w=1200&q=85')"><div><span>09</span><h3>AVCB / CLCB</h3><p>Suporte técnico e documentação.</p></div></article>
-  <article class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=85')"><div><span>10</span><h3>Laudo de incêndio</h3><p>Inspeção e avaliação técnica.</p></div></article>
-  <article class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=85')"><div><span>11</span><h3>Reboco e recuperação</h3><p>Correções, recuperação e acabamento.</p></div></article>
-  <article class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85')"><div><span>12</span><h3>Vidraçaria</h3><p>Vidros, alumínio e envidraçamento.</p></div></article>
+<section id="servicos"><div class="wrap"><div class="head"><div><div class="kicker">Nossos serviços</div><h2>Soluções completas para seu imóvel.</h2></div><p>Serviços técnicos e de execução, apresentados de forma clara para você encontrar exatamente o que precisa.</p></div>
+<div class="service-grid">
+<article class="service s1"><div class="service-content"><small>01</small><h3>Impermeabilização</h3><p>Proteção contra infiltrações e umidade.</p></div></article>
+<article class="service s2"><div class="service-content"><small>02</small><h3>Revestimentos</h3><p>Pisos, paredes e acabamentos.</p></div></article>
+<article class="service s3"><div class="service-content"><small>03</small><h3>Forros</h3><p>Forros e soluções de acabamento.</p></div></article>
+<article class="service s4"><div class="service-content"><small>04</small><h3>Drywall</h3><p>Divisórias e ambientes internos.</p></div></article>
+<article class="service s5"><div class="service-content"><small>05</small><h3>Reformas</h3><p>Residenciais, comerciais e prediais.</p></div></article>
+<article class="service s6"><div class="service-content"><small>06</small><h3>Laudos e vistorias</h3><p>Avaliações técnicas com responsabilidade.</p></div></article>
+<article class="service s7"><div class="service-content"><small>07</small><h3>Projetos</h3><p>Do conceito à execução.</p></div></article>
+<article class="service s8"><div class="service-content"><small>08</small><h3>Sistema contra incêndio</h3><p>Projetos, execução e manutenção.</p></div></article>
+<article class="service s9"><div class="service-content"><small>09</small><h3>AVCB / CLCB</h3><p>Regularização e documentação.</p></div></article>
+<article class="service s10"><div class="service-content"><small>10</small><h3>Laudo de incêndio</h3><p>Avaliação técnica para segurança.</p></div></article>
+<article class="service s11"><div class="service-content"><small>11</small><h3>Reboco e recuperação</h3><p>Manutenção e recuperação de estruturas.</p></div></article>
+<article class="service s12"><div class="service-content"><small>12</small><h3>Vidraçaria</h3><p>Vidros, alumínio e envidraçamento.</p></div></article>
 </div></div></section>
 
-<section class="about" id="sobre"><div class="container about-grid">
-<div class="about-panel"><div class="about-logo">IN</div><div><strong>Engenharia com responsabilidade.</strong><span>IN Prestações de Serviços</span></div></div>
-<div class="about-text"><div class="kicker">Sobre a empresa</div><h2>Experiência técnica com foco no resultado.</h2><p>A IN Prestações de Serviços atua com soluções de engenharia, manutenção e reformas para empresas, condomínios e clientes particulares.</p><p>À frente dos serviços está o <strong>Eng. Civil Ivan Nascimento de Jesus</strong>, responsável técnico pelos trabalhos de engenharia.</p>
-<div class="checklist"><div class="check">Atendimento profissional</div><div class="check">Responsabilidade técnica</div><div class="check">Orçamento personalizado</div><div class="check">Execução organizada</div></div></div>
-</div></section>
+<section class="about" id="sobre"><div class="wrap about-grid"><div class="about-photo"></div><div class="about-copy"><div class="kicker">Por que escolher a IN?</div><h2>Engenharia com responsabilidade e resultado.</h2><p>A IN Prestações de Serviços reúne engenharia, manutenção e execução para empresas, condomínios e clientes particulares.</p><p><strong>Eng. Civil Ivan Nascimento de Jesus</strong> — responsável técnico pelos serviços de engenharia.</p><div class="points"><div class="point">Responsabilidade técnica</div><div class="point">Equipe qualificada</div><div class="point">Orçamento personalizado</div><div class="point">Atendimento profissional</div><div class="point">Execução organizada</div><div class="point">Compromisso com qualidade</div></div></div></div></section>
 
-<section class="projects" id="projetos"><div class="container">
-<div class="section-head"><div><div class="kicker">Experiência</div><h2>Projetos e soluções realizadas.</h2></div><p>Apresentação visual dos principais tipos de trabalho executados pela equipe.</p></div>
-<div class="project-grid">
- <article class="project project-a" style="background-image:url('https://images.unsplash.com/photo-1783753445287-4ce8ef207492?auto=format&fit=crop&fm=jpg&q=85&w=1600')"><div class="project-content"><small>Manutenção predial</small><h3>Recuperação e tratamento de infiltrações</h3><p>Diagnóstico, tratamento, recuperação e acabamento.</p></div></article>
- <article class="project project-b" style="background-image:url('https://images.unsplash.com/photo-1776537237450-73226455726f?auto=format&fit=crop&fm=jpg&q=85&w=1600')"><div class="project-content"><small>Envidraçamento</small><h3>Soluções em vidro e alumínio</h3><p>Fechamentos e aplicações sob medida.</p></div></article>
- <article class="project project-c" style="background-image:url('https://images.unsplash.com/photo-1652303518372-79ad122e3181?auto=format&fit=crop&fm=jpg&q=85&w=1800')"><div class="project-content"><small>Reformas</small><h3>Execução e acabamento</h3><p>Serviços coordenados do início ao acabamento.</p></div></article>
-</div></div></section>
+<section class="projects" id="projetos"><div class="wrap"><div class="head"><div><div class="kicker">Obras e projetos</div><h2>Resultados que falam por si.</h2></div><p>Uma apresentação profissional para mostrar a qualidade dos serviços realizados.</p></div><div class="project-grid"><article class="project p1"><div class="project-info"><small>Obras e reformas</small><h3>Execução e acabamento profissional</h3><p>Serviços coordenados do início ao acabamento.</p></div></article><article class="project p2"><div class="project-info"><small>Manutenção predial</small><h3>Soluções para seu imóvel</h3><p>Diagnóstico, recuperação e manutenção.</p></div></article></div></div></section>
 
-<section class="visual-proof"><div class="container">
-  <div class="photo-proof">
-    <img src="https://images.unsplash.com/photo-1776537237450-73226455726f?auto=format&fit=crop&fm=jpg&q=85&w=1600" alt="Arquitetura e construção">
-    <div><div class="kicker">Engenharia em foco</div><h2>Imagem profissional para transmitir a qualidade do seu trabalho.</h2><p>Enquanto você reúne suas próprias fotos de obras, o site já apresenta uma identidade visual forte e profissional.</p></div>
-  </div>
-</div></section>
-
-<section class="contact" id="contato"><div class="container contact-grid">
-<div><div class="kicker">Vamos conversar</div><h2>Seu imóvel merece uma solução técnica.</h2><p>Envie as informações do serviço, fotos ou documentos. Avaliamos a demanda e orientamos o próximo passo.</p><a class="btn btn-primary" href="https://wa.me/5511968354094?text=Olá!%20Sou%20cliente%20e%20gostaria%20de%20uma%20avaliação." target="_blank">Solicitar atendimento →</a></div>
-<div class="contact-box"><span>WhatsApp</span><strong>(11) 96835-4094</strong><span>Responsável técnico</span><strong style="font-size:18px">Eng. Civil Ivan Nascimento de Jesus</strong></div>
-</div></section>
+<section class="contact" id="contato"><div class="wrap contact-grid"><div><div class="kicker">Vamos conversar</div><h2>Seu projeto em boas mãos.</h2><p>Envie fotos, documentos ou explique o serviço que precisa. Fale diretamente com a equipe e solicite seu orçamento.</p><a class="btn whats" href="https://wa.me/5511968354094?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank">◉ Solicitar orçamento via WhatsApp</a></div><div class="contact-box"><small>WhatsApp</small><b>(11) 96835-4094</b><small>Responsável técnico</small><b style="font-size:16px">Eng. Civil Ivan Nascimento de Jesus</b></div></div></section>
 </main>
-
-<footer><div class="container footer"><div>© 2026 IN Prestações de Serviços. Todos os direitos reservados.</div><div>Engenharia Civil · São Paulo e Grande São Paulo</div></div></footer>
+<footer><div class="wrap foot"><div>© 2026 IN Prestações de Serviços</div><div>Engenharia Civil · São Paulo e Grande São Paulo</div></div></footer>
+<script>
+const btn=document.getElementById('menuBtn'),drawer=document.getElementById('drawer');
+btn.addEventListener('click',()=>drawer.classList.toggle('open'));
+drawer.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>drawer.classList.remove('open')));
+</script>
 </body>
 </html>
-<script>
-(function(){
-  const btn=document.getElementById('menuBtn');
-  const drawer=document.getElementById('mobileDrawer');
-  if(btn && drawer){
-    btn.addEventListener('click',()=>drawer.classList.toggle('open'));
-    drawer.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>drawer.classList.remove('open')));
-  }
-})();
-</script>
