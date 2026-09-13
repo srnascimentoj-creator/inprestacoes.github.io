@@ -71,6 +71,16 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.08;letter-spacing:-1.7px}
 .card:hover{transform:translateY(-4px);box-shadow:0 18px 45px rgba(8,24,45,.08)}
 .num{font-family:Manrope;color:#9aa9ba;font-size:12px;font-weight:800}
 .card h3{font-size:22px;margin:38px 0 9px}.card p{font-size:14px;color:var(--muted)}
+.service-photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.service-photo{height:260px;border-radius:12px;overflow:hidden;position:relative;background-position:center;background-size:cover;background-color:#17314e;display:flex;align-items:flex-end}
+.service-photo:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,18,32,.02) 20%,rgba(5,18,32,.86) 100%)}
+.service-photo>div{position:relative;z-index:2;color:#fff;padding:22px;width:100%}
+.service-photo span{font-size:10px;letter-spacing:1.5px;color:#c7d9ea;font-weight:800}
+.service-photo h3{font-size:21px;margin:4px 0 2px}
+.service-photo p{font-size:12px;color:#d8e4ef}
+.helmet-icon{width:42px;height:42px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#e8f1f8;color:var(--navy);font-size:22px;flex:none}
+.hero-label{display:flex;align-items:center;gap:12px}
+
 .about{background:var(--soft)}
 .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
 .about-panel{background:var(--navy);color:#fff;border-radius:16px;padding:50px;min-height:410px;display:flex;flex-direction:column;justify-content:space-between}
@@ -120,6 +130,16 @@ header,.nav{height:72px}.nav{padding:0}.brand img{height:42px}.brand span{displa
 h1{letter-spacing:-2px}.hero p{font-size:17px}.trust .container{grid-template-columns:1fr 1fr;gap:22px}.trust-item{border:0;padding:0}
 section{padding:70px 0}.section-head{display:block}.section-head p{margin-top:14px}.cards{grid-template-columns:1fr}.about-grid,.contact-grid{grid-template-columns:1fr;gap:35px}.about-panel{min-height:320px;padding:35px}.project-grid{grid-template-columns:1fr;grid-template-rows:repeat(3,230px);min-height:0}.project:first-child{grid-row:auto}.photo-proof{grid-template-columns:1fr}.photo-proof>div:last-child{padding:30px}.photo-proof img{min-height:240px}.checklist{grid-template-columns:1fr}.footer{display:block}.footer div+div{margin-top:8px}
 }
+
+@media(max-width:850px){
+.service-photo-grid{grid-template-columns:1fr 1fr;gap:10px}
+.service-photo{height:210px}
+.service-photo h3{font-size:17px}
+.service-photo p{font-size:11px}
+.service-photo>div{padding:15px}
+.hero-label{max-width:calc(100% - 36px)}
+}
+
 </style>
 </head>
 <body>
@@ -149,7 +169,7 @@ section{padding:70px 0}.section-head{display:block}.section-head p{margin-top:14
 <div class="container">
   <div>
     <div class="hero-badge"><span class="crea-tag">CREA-SP</span> Engenharia Civil · São Paulo e Grande São Paulo</div>
-    <h1>Precisão técnica para decisões que precisam dar certo.</h1>
+    <h1>Engenharia que transforma problemas em soluções.</h1>
     <p>Laudos, ART, CLCB/AVCB, reformas e manutenção predial com responsabilidade técnica e execução profissional.</p>
     <div class="hero-actions">
       <a href="https://wa.me/5511968354094?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank" class="btn btn-whatsapp-hero"><span class="wa-icon">◉</span> Solicitar orçamento via WhatsApp</a>
@@ -159,7 +179,10 @@ section{padding:70px 0}.section-head{display:block}.section-head p{margin-top:14
   <div class="hero-photo">
     <img src="https://images.unsplash.com/photo-1652303518372-79ad122e3181?auto=format&fit=crop&fm=jpg&q=85&w=1800" alt="Equipe em obra de construção civil">
     <div class="hero-photo-overlay"></div>
-    <div class="hero-label"><small>Responsabilidade técnica</small><strong>Eng. Civil Ivan Nascimento de Jesus</strong></div>
+    <div class="hero-label">
+  <div class="helmet-icon">⛑</div>
+  <div><small>Responsabilidade técnica</small><strong>Eng. Civil Ivan Nascimento de Jesus</strong></div>
+</div>
   </div>
 </div>
 </section>
@@ -171,15 +194,22 @@ section{padding:70px 0}.section-head{display:block}.section-head p{margin-top:14
   <div class="trust-item"><strong>Atendimento</strong><span>São Paulo e Grande SP</span></div>
 </div></div>
 
+
 <section class="services" id="servicos"><div class="container">
-<div class="section-head"><div><div class="kicker">Soluções</div><h2>Serviços para cada etapa do seu imóvel.</h2></div><p>Do diagnóstico técnico à execução, reunimos engenharia e prestação de serviços em um único atendimento.</p></div>
-<div class="cards">
-  <article class="card"><span class="num">01</span><h3>Laudos e vistorias</h3><p>Inspeções, pareceres e diagnósticos técnicos para identificar problemas e orientar decisões.</p></article>
-  <article class="card"><span class="num">02</span><h3>ART e documentação</h3><p>Responsabilidade técnica, memoriais, documentação e suporte para regularização de serviços.</p></article>
-  <article class="card"><span class="num">03</span><h3>Reformas</h3><p>Planejamento e execução de reformas com organização, acompanhamento e acabamento profissional.</p></article>
-  <article class="card"><span class="num">04</span><h3>Manutenção predial</h3><p>Tratamento de infiltrações, pintura, forros, revestimentos, impermeabilização e reparos.</p></article>
-  <article class="card"><span class="num">05</span><h3>AVCB e CLCB</h3><p>Suporte técnico e documentação para processos relacionados à segurança contra incêndio.</p></article>
-  <article class="card"><span class="num">06</span><h3>Vidros e envidraçamento</h3><p>Soluções em vidro e alumínio, incluindo fechamento de sacadas e aplicações especiais.</p></article>
+<div class="section-head"><div><div class="kicker">Serviços</div><h2>Engenharia, obra e manutenção em um só lugar.</h2></div><p>Cada serviço apresentado com uma imagem que remete diretamente ao trabalho realizado pela IN.</p></div>
+<div class="service-photo-grid">
+  <article class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85')"><div><span>01</span><h3>Impermeabilização</h3><p>Proteção contra infiltrações e umidade.</p></div></article>
+  <article class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=1200&q=85')"><div><span>02</span><h3>Revestimentos</h3><p>Acabamentos, pisos e paredes.</p></div></article>
+  <article class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=85')"><div><span>03</span><h3>Forros</h3><p>Forro, manutenção e acabamento.</p></div></article>
+  <article class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=85')"><div><span>04</span><h3>Drywall</h3><p>Divisórias e soluções internas.</p></div></article>
+  <article class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=85')"><div><span>05</span><h3>Reformas</h3><p>Execução e acompanhamento.</p></div></article>
+  <article class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=85')"><div><span>06</span><h3>Laudos e vistorias</h3><p>Diagnóstico e parecer técnico.</p></div></article>
+  <article class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85')"><div><span>07</span><h3>Projetos</h3><p>Planejamento e soluções técnicas.</p></div></article>
+  <article class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1542013936693-884638332954?auto=format&fit=crop&w=1200&q=85')"><div><span>08</span><h3>Sistema contra incêndio</h3><p>Soluções para segurança da edificação.</p></div></article>
+  <article class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1517089596392-fb9a9033e05b?auto=format&fit=crop&w=1200&q=85')"><div><span>09</span><h3>AVCB / CLCB</h3><p>Suporte técnico e documentação.</p></div></article>
+  <article class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=85')"><div><span>10</span><h3>Laudo de incêndio</h3><p>Inspeção e avaliação técnica.</p></div></article>
+  <article class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=85')"><div><span>11</span><h3>Reboco e recuperação</h3><p>Correções, recuperação e acabamento.</p></div></article>
+  <article class="service-photo" style="background-image:url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85')"><div><span>12</span><h3>Vidraçaria</h3><p>Vidros, alumínio e envidraçamento.</p></div></article>
 </div></div></section>
 
 <section class="about" id="sobre"><div class="container about-grid">
