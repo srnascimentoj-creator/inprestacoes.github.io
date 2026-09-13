@@ -100,11 +100,23 @@ footer{background:#061222;color:#94a9be;padding:28px 0;font-size:12px}.footer{di
 .photo-proof>div:last-child{padding:45px}
 .photo-proof p{color:var(--muted);margin-top:15px;max-width:450px}
 
+
+.mobile-drawer{display:none}
+.mobile-drawer.open{display:flex}
+.mobile-drawer{position:fixed;top:72px;left:0;right:0;background:#fff;z-index:49;border-bottom:1px solid var(--line);box-shadow:0 15px 30px rgba(8,24,45,.12);padding:14px 20px;flex-direction:column;gap:2px}
+.mobile-drawer a{padding:14px 4px;font-weight:700;color:var(--ink);border-bottom:1px solid #edf1f5}
+.mobile-drawer .drawer-cta{margin-top:8px;background:var(--navy);color:#fff;border:0;border-radius:7px;text-align:center}
+
 @media(max-width:850px){
 .hero-badge{font-size:11px;max-width:100%;white-space:normal}
-
 header,.nav{height:72px}.nav{padding:0}.brand img{height:42px}.brand span{display:none}
-.menu{display:none}.mobile{display:block}.hero .container{grid-template-columns:1fr;min-height:auto;padding:64px 0 70px}.hero-card{display:none}.hero-photo{min-height:380px}.hero-photo img{min-height:380px}
+.menu{display:none}.mobile{display:block;border:1px solid var(--line);background:#fff;color:var(--navy);border-radius:7px;padding:10px 14px;font-weight:800}
+.hero .container{display:flex;flex-direction:column;gap:0;min-height:auto;padding:0 0 62px}
+.hero-photo{order:1;width:100%;min-height:330px;border-radius:0;box-shadow:none;border:0}
+.hero-photo img{width:100%;height:330px;min-height:330px;object-fit:cover}
+.hero-photo .hero-label{left:20px;bottom:18px}
+.hero .container>div:first-child{order:2;padding:45px 20px 0}
+.hero .hero-actions{margin-bottom:0}
 h1{letter-spacing:-2px}.hero p{font-size:17px}.trust .container{grid-template-columns:1fr 1fr;gap:22px}.trust-item{border:0;padding:0}
 section{padding:70px 0}.section-head{display:block}.section-head p{margin-top:14px}.cards{grid-template-columns:1fr}.about-grid,.contact-grid{grid-template-columns:1fr;gap:35px}.about-panel{min-height:320px;padding:35px}.project-grid{grid-template-columns:1fr;grid-template-rows:repeat(3,230px);min-height:0}.project:first-child{grid-row:auto}.photo-proof{grid-template-columns:1fr}.photo-proof>div:last-child{padding:30px}.photo-proof img{min-height:240px}.checklist{grid-template-columns:1fr}.footer{display:block}.footer div+div{margin-top:8px}
 }
@@ -121,9 +133,16 @@ section{padding:70px 0}.section-head{display:block}.section-head p{margin-top:14
       <a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#projetos">Projetos</a><a href="#contato">Contato</a>
       <a class="cta" href="https://wa.me/5511968354094?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank">Solicitar orçamento</a>
     </nav>
-    <a class="mobile" href="#contato">Orçamento</a>
+    <button class="mobile" id="menuBtn" aria-label="Abrir menu">☰ <span>Menu</span></button>
   </div>
 </header>
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="#servicos">Serviços</a>
+  <a href="#sobre">Sobre</a>
+  <a href="#projetos">Projetos</a>
+  <a href="#contato">Contato</a>
+  <a class="drawer-cta" href="https://wa.me/5511968354094?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank">Solicitar orçamento via WhatsApp</a>
+</div>
 
 <main>
 <section class="hero" id="inicio">
@@ -193,3 +212,13 @@ section{padding:70px 0}.section-head{display:block}.section-head p{margin-top:14
 <footer><div class="container footer"><div>© 2026 IN Prestações de Serviços. Todos os direitos reservados.</div><div>Engenharia Civil · São Paulo e Grande São Paulo</div></div></footer>
 </body>
 </html>
+<script>
+(function(){
+  const btn=document.getElementById('menuBtn');
+  const drawer=document.getElementById('mobileDrawer');
+  if(btn && drawer){
+    btn.addEventListener('click',()=>drawer.classList.toggle('open'));
+    drawer.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>drawer.classList.remove('open')));
+  }
+})();
+</script>
